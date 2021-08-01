@@ -1,0 +1,20 @@
+CREATE DATABASE myNewDB;
+DROP DATABASE myNewDB;
+CREATE SCHEMA BuildandDestroy;
+USE BuildandDestroy;
+CREATE TABLE Users;
+CREATE TABLE USERS (
+UserID int,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255) NOT NULL,
+Adress varchar(255) NOT NULL,
+City varchar(255) NOT NULL
+);
+TRUNCATE TABLE USERS;
+DESCRIBE TABLES USERS;
+ALTER TABLE USERS
+ADD Birthday Date NOT NULL;
+ALTER TABLE USERS
+DROP COLUMN Birthday;
+INSERT INTO USERS (FirstName, LastName, Adress, City)
+VALUES (Jane, Doe, 57 , Glassgow);
